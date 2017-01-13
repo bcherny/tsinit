@@ -49,7 +49,6 @@ MIT
 
 ## Todo
 
-- [ ] Get Git username from Git
-- [ ] Get NPM username, email from NPM
+- [ ] Fetch and generate LICENSE.md
 - [ ] Run git init
 - [ ] Add project to CircleCI via API
