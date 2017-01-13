@@ -69,5 +69,5 @@ main()
  * Synchronously executes a shell command
  */
 function $(command: string): string {
-  return (execSync(command, { encoding: 'utf-8' }) as any as string).replace(/\\n/g, '')
+  return (execSync(command, { encoding: 'utf-8' }) as any as string).replace(/\n/g, '').trim()
 }
