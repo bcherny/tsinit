@@ -24,14 +24,15 @@ Mode: simple
 Name: my-project
 ----------
 
-Wrote index.d.ts
+Wrote .gitignore
+Wrote .npmignore
+Wrote circle.yml
 Wrote index.ts
-Wrote index.js
-Wrote index.js.map
 Wrote LICENSE.md
 Wrote package.json
-Wrote tsconfig.json
 Wrote README.md
+Wrote test.ts
+Wrote tsconfig.json
 Wrote tslint.json
 
 Generated project "my-project" in 43ms!
