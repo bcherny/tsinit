@@ -12,13 +12,28 @@ async function main() {
 
   const isSimple = process.argv.includes('-s') || process.argv.includes('--simple')
   const name = basename(process.cwd())
-  const folder = resolve(`${__dirname}/templates/${isSimple ? 'simple' : 'full'}`)
-  const files = glob.sync(`${folder}/**/*`)
+  const folder = `${__dirname}/templates/${isSimple ? 'simple' : 'full'}`
+  const files = glob.sync(`${resolve(folder)}/**/*`, { ignore: ['.DS_Store', 'node_modules', '*.js', '*.map', '*.d.ts'] })
+
+  // check if folder has contents
+  if (glob.sync(`${process.cwd()}/*`).length) {
+    throw new Error('Aborting! Please empty the current directory')
+  }
+
+  console.log('')
+  console.log('----------')
+  console.log('- tsinit -')
+  console.log('----------')
+  console.log('')
+  console.log(`Mode: ${isSimple ? 'simple' : 'full'}`)
+  console.log(`Name: ${name}`)
+  console.log('---------')
+  console.log('')
 
   Promise
     .all(files.map(async filename => {
       const contents = template(await readFile(filename, 'utf-8'))({ name })
-      const newFilename = relative(__dirname, filename)
+      const newFilename = relative(folder, filename)
       await writeFile(`${process.cwd()}/${newFilename}`, contents, 'utf-8')
       console.log(`Wrote ${newFilename}`)
     }))
