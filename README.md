@@ -52,3 +52,4 @@ MIT
 - [ ] Get Git username from Git
 - [ ] Get NPM username, email from NPM
 - [ ] Run git init
+- [ ] Add project to CircleCI via API
