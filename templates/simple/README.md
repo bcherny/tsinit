@@ -1,11 +1,11 @@
-# {{ name }} [![Build Status](https://img.shields.io/circleci/project/bcherny/{{ name }}.svg?branch=master&style=flat-square)](https://circleci.com/gh/bcherny/{{ name }}) [![NPM](https://img.shields.io/npm/v/{{ name }}.svg?style=flat-square)](https://www.npmjs.com/package/{{ name }}) [![MIT](https://img.shields.io/npm/l/{{ name }}.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+# {{ packageName }} [![Build Status](https://img.shields.io/circleci/project/{{ authorUsername }}/{{ packageName }}.svg?branch=master&style=flat-square)](https://circleci.com/gh/{{ authorUsername }}/{{ packageName }}) [![NPM](https://img.shields.io/npm/v/{{ packageName }}.svg?style=flat-square)](https://www.npmjs.com/package/{{ packageName }}) [![MIT](https://img.shields.io/npm/l/{{ packageName }}.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
 > Description
 
 ## Installation
 
 ```sh
-npm install {{ name }} --save
+npm install {{ packageName }} --save
 ```
 
 ## Usage
