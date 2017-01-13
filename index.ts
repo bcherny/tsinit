@@ -27,10 +27,10 @@ async function main() {
   console.log('- tsinit -')
   console.log('----------')
   console.log('')
-  console.log('---------')
+  console.log('----------')
   console.log(`Mode: ${isSimple ? 'simple' : 'full'}`)
   console.log(`Name: ${name}`)
-  console.log('---------')
+  console.log('----------')
   console.log('')
 
   Promise
@@ -43,7 +43,7 @@ async function main() {
     .then(() => {
       const endTime = new Date().getTime()
       console.log('')
-      console.log(`Generated project ${name} in ${endTime - startTime}ms!`)
+      console.log(`Generated project "${name}" in ${endTime - startTime}ms!`)
       console.log('')
     })
 

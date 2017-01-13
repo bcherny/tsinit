@@ -11,9 +11,30 @@ npm install tsinit --global
 ## Usage
 
 ```sh
-mkdir my-project
-cd my-project
-tsinit
+> mkdir my-project
+> cd my-project
+> tsinit -s
+
+----------
+- tsinit -
+----------
+
+----------
+Mode: simple
+Name: my-project
+----------
+
+Wrote index.d.ts
+Wrote index.ts
+Wrote index.js
+Wrote index.js.map
+Wrote LICENSE.md
+Wrote package.json
+Wrote tsconfig.json
+Wrote README.md
+Wrote tslint.json
+
+Generated project "my-project" in 43ms!
 ```
 
 ## Tests
@@ -25,3 +46,9 @@ npm test
 ## License
 
 MIT
+
+## Todo
+
+- [ ] Get Git username from Git
+- [ ] Get NPM username, email from NPM
+- [ ] Run git init
