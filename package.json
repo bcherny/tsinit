@@ -1,14 +1,14 @@
 {
   "bin": "index.js",
   "name": "tsinit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Zero-config, opinionated generator for TypeScript + TsLint + Ava projects",
   "main": "index.js",
   "typings": "index.d.ts",
   "scripts": {
     "build": "tsc",
     "pretest": "npm run build",
-    "prepublish": "npm run build && npm test",
+    "prepublish": "npm test",
     "test": "ava",
     "tdd": "npm run watch & ava -w",
     "watch": "tsc -w"

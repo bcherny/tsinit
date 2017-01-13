@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 import { readFile, writeFile } from 'fs-promise'
 import * as glob from 'glob'
 import { template, templateSettings } from 'lodash'
