@@ -7,6 +7,8 @@ import { basename, relative, resolve } from 'path'
 
 async function main() {
 
+  const startTime = new Date().getTime()
+
   // use {{}} for templates
   templateSettings.interpolate = /{{([\s\S]+?)}}/g
 
@@ -25,6 +27,7 @@ async function main() {
   console.log('- tsinit -')
   console.log('----------')
   console.log('')
+  console.log('---------')
   console.log(`Mode: ${isSimple ? 'simple' : 'full'}`)
   console.log(`Name: ${name}`)
   console.log('---------')
@@ -38,7 +41,10 @@ async function main() {
       console.log(`Wrote ${newFilename}`)
     }))
     .then(() => {
-      console.log(`Generated project ${name}!`)
+      const endTime = new Date().getTime()
+      console.log('')
+      console.log(`Generated project ${name} in ${endTime - startTime}ms!`)
+      console.log('')
     })
 
 }
