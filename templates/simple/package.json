@@ -1,0 +1,32 @@
+{
+  "name": "{{ name }}",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "pretest": "npm run build",
+    "prepublish": "npm run build && npm test",
+    "test": "ava",
+    "tdd": "npm run watch & ava -w",
+    "watch": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bcherny/{{ name }}.git"
+  },
+  "keywords": [
+  ],
+  "author": "Boris Cherny <boris@performancejs.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bcherny/{{ name }}/issues"
+  },
+  "homepage": "https://github.com/bcherny/{{ name }}#readme",
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "tslint": "^4.3.1",
+    "typescript": "^2.1.5"
+  }
+}
