@@ -5,7 +5,7 @@
   "main": "index.js",
   "typings": "index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "rm ./*.d.ts; tsc",
     "pretest": "npm run build",
     "prepublish": "npm test",
     "test": "ava",

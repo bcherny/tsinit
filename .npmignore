@@ -1,6 +1,10 @@
 .DS_Store
 .vscode
-./circle.yml
+circle.yml
 node_modules
 npm-debug.log
 ./test.*
+!templates/**/circle.yml
+!templates/**/test.ts
+!templates/**/.gitignore
+!templates/**/.npmignore
